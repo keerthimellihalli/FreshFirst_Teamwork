@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh First - Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+    <header>
+        <h1>Fresh First</h1>
+        <p>Perishable Stock Verification System</p>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="stock.html">Stock</a>
+        <a href="verification.html">Verification</a>
+        <a href="priority.html">Priority</a>
+        <a href="actions.html">Actions</a>
+        <a href="history.html">History</a>
+        <a href="reports.html">Reports</a>
+        <a href="users.html">Users</a>
+        <a href="categories.html">Categories</a>
+        <a href="settings.html">Settings</a>
+        <a href="login.html">Logout</a>
+    </nav>
+
+    <main>
+        <h2>Dashboard</h2>
+        <p>Welcome to Fresh First!</p>
+
+        <p>Today's Date: <span id="currentDate"></span></p>
+
+        <section class="dashboard-cards">
+
+            <div class="card">
+                <h3>Total Products</h3>
+                <p id="totalProducts">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Critical Products</h3>
+                <p id="criticalProducts">0</p>
+            </div>
+
+            <div class="card">
+                <h3>High Priority</h3>
+                <p id="highProducts">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Expired Products</h3>
+                <p id="expiredProducts">0</p>
+            </div>
+
+        </section>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+</html>

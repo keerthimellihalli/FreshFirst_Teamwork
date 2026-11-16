@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh First - Stock History</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/history.css">
+</head>
+<body>
+
+    <header>
+        <h1>Fresh First</h1>
+        <h2>Stock Verification History</h2>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="stock.html">Stock</a>
+        <a href="verification.html">Verification</a>
+        <a href="priority.html">Priority</a>
+        <a href="actions.html">Actions</a>
+        <a href="history.html">History</a>
+        <a href="reports.html">Reports</a>
+    </nav>
+
+    <main>
+        <h2>History Records</h2>
+
+        <label for="historySearch">Search Product</label>
+        <input type="text" id="historySearch"
+               placeholder="Search by product name">
+
+        <table id="historyTable">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Verification Date</th>
+                    <th>Priority</th>
+                    <th>Suggested Action</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Milk</td>
+                    <td>2026-11-16</td>
+                    <td>Critical</td>
+                    <td>Priority Sale</td>
+                    <td>Pending</td>
+                </tr>
+                <tr>
+                    <td>Apples</td>
+                    <td>2026-11-15</td>
+                    <td>Medium</td>
+                    <td>Quick Usage</td>
+                    <td>Completed</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+    <script src="js/history.js"></script>
+
+</body>
+</html>

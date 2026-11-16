@@ -1,0 +1,112 @@
+
+/* FRESH FIRST - USER MANAGEMENT PAGE */
+
+.users-page {
+    background: #f4f8f5;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.users-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.users-header h2 {
+    color: #24332b;
+}
+
+.users-header p {
+    color: #6c757d;
+    margin-top: 7px;
+}
+
+.users-form-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.users-form-container h3 {
+    color: #198754;
+    margin-bottom: 20px;
+}
+
+.users-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.users-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.users-form label {
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: #35463b;
+}
+
+.users-form input,
+.users-form select {
+    padding: 11px;
+    border: 1px solid #dce8df;
+    border-radius: 7px;
+}
+
+.users-table-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.users-table-container h3 {
+    color: #24332b;
+    margin-bottom: 18px;
+}
+
+.users-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+.users-table th,
+.users-table td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #e8eee9;
+}
+
+.users-table th {
+    background: #e8f5ed;
+    color: #198754;
+}
+
+.user-role {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #e8f5ed;
+    color: #198754;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .users-page {
+        padding: 18px;
+    }
+
+    .users-form {
+        grid-template-columns: 1fr;
+    }
+}

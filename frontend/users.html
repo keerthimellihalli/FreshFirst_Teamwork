@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh First - User Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/users.css">
+</head>
+<body>
+
+    <header>
+        <h1>Fresh First</h1>
+        <h2>User Management</h2>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="stock.html">Stock</a>
+        <a href="verification.html">Verification</a>
+        <a href="priority.html">Priority</a>
+        <a href="actions.html">Actions</a>
+        <a href="history.html">History</a>
+        <a href="reports.html">Reports</a>
+        <a href="users.html">Users</a>
+    </nav>
+
+    <main>
+        <h2>Add New User</h2>
+
+        <form id="userForm">
+
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName"
+                   placeholder="Enter full name" required>
+
+            <label for="username">Username</label>
+            <input type="text" id="username"
+                   placeholder="Enter username" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password"
+                   placeholder="Enter password" required>
+
+            <label for="role">User Role</label>
+            <select id="role" required>
+                <option value="">Select Role</option>
+                <option value="Admin">Admin</option>
+                <option value="Store Manager">Store Manager</option>
+                <option value="Staff">Staff</option>
+            </select>
+
+            <button type="submit">Add User</button>
+
+        </form>
+
+        <h2>User Details</h2>
+
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Username</th>
+                    <th>Role</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    </main>
+
+    <script src="js/users.js"></script>
+
+</body>
+</html>

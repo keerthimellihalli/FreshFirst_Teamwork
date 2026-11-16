@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh First - Priority Management</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/priority.css">
+</head>
+<body>
+
+    <header>
+        <h1>Fresh First</h1>
+        <h2>Product Priority Management</h2>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="stock.html">Stock</a>
+        <a href="verification.html">Verification</a>
+        <a href="priority.html">Priority</a>
+        <a href="actions.html">Actions</a>
+        <a href="history.html">History</a>
+        <a href="reports.html">Reports</a>
+    </nav>
+
+    <main>
+        <h2>Priority Details</h2>
+
+        <label for="priorityFilter">Filter by Priority</label>
+
+        <select id="priorityFilter">
+            <option value="all">All Priorities</option>
+            <option value="Critical">Critical</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+            <option value="Inspection Needed">Inspection Needed</option>
+        </select>
+
+        <table id="priorityTable">
+            <thead>
+                <tr>
+                    <th>Product Name</th>
+                    <th>Quantity</th>
+                    <th>Expiry Date</th>
+                    <th>Priority Level</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Milk</td>
+                    <td>20</td>
+                    <td>2026-11-18</td>
+                    <td><span class="priority-label">Critical</span></td>
+                </tr>
+
+                <tr>
+                    <td>Apples</td>
+                    <td>50</td>
+                    <td>2026-11-25</td>
+                    <td><span class="priority-label">Medium</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </main>
+
+    <script src="js/priority.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+
+/* FRESH FIRST - VERIFICATION PAGE */
+
+.verification-page {
+    background: #f4f8f5;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.verification-header {
+    margin-bottom: 25px;
+}
+
+.verification-header h2 {
+    color: #24332b;
+    margin-bottom: 8px;
+}
+
+.verification-header p {
+    color: #6c757d;
+}
+
+.verification-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+.verification-container h3 {
+    color: #198754;
+    margin-bottom: 20px;
+}
+
+.verification-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.verification-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.verification-form label {
+    margin-bottom: 7px;
+    font-weight: 600;
+    color: #35463b;
+}
+
+.verification-form input,
+.verification-form select,
+.verification-form textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #dce8df;
+    border-radius: 7px;
+}
+
+.verification-form textarea {
+    min-height: 90px;
+    resize: vertical;
+}
+
+.verification-form .full-width {
+    grid-column: 1 / -1;
+}
+
+.verification-result {
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    background: #e8f5ed;
+    border-left: 4px solid #198754;
+}
+
+.verification-result h4 {
+    color: #198754;
+    margin-bottom: 10px;
+}
+
+.verification-result p {
+    color: #35463b;
+    margin-bottom: 7px;
+}
+
+.verification-table-container {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.verification-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.verification-table th,
+.verification-table td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #e8eee9;
+}
+
+.verification-table th {
+    background: #e8f5ed;
+    color: #198754;
+}
+
+@media (max-width: 600px) {
+    .verification-page {
+        padding: 18px;
+    }
+
+    .verification-form {
+        grid-template-columns: 1fr;
+    }
+}

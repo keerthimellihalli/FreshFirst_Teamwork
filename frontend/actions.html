@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh First - Suggested Actions</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/actions.css">
+</head>
+<body>
+
+    <header>
+        <h1>Fresh First</h1>
+        <h2>Suggested Actions</h2>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="stock.html">Stock</a>
+        <a href="verification.html">Verification</a>
+        <a href="priority.html">Priority</a>
+        <a href="actions.html">Actions</a>
+        <a href="history.html">History</a>
+        <a href="reports.html">Reports</a>
+    </nav>
+
+    <main>
+        <h2>Manage Product Actions</h2>
+
+        <form id="actionForm">
+
+            <label for="productName">Product Name</label>
+            <input type="text" id="productName"
+                   placeholder="Enter product name" required>
+
+            <label for="suggestedAction">Suggested Action</label>
+            <select id="suggestedAction" required>
+                <option value="">Select Action</option>
+                <option value="Priority Sale">Priority Sale</option>
+                <option value="Quick Usage">Quick Usage</option>
+                <option value="Redistribution">Redistribution</option>
+                <option value="Further Inspection">Further Inspection</option>
+                <option value="Disposal">Disposal</option>
+            </select>
+
+            <label for="remarks">Remarks</label>
+            <textarea id="remarks"
+                      placeholder="Enter remarks"></textarea>
+
+            <button type="submit">Save Action</button>
+
+        </form>
+
+    </main>
+
+    <script src="js/actions.js"></script>
+
+</body>
+</html>
