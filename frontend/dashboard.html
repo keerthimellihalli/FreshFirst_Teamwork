@@ -4,64 +4,259 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fresh First - Dashboard</title>
-
-    <link rel="stylesheet" href="css/style.css">
+    <title>Fresh First | Dashboard</title>
     <link rel="stylesheet" href="css/dashboard.css">
 </head>
 <body>
 
-    <header>
-        <h1>Fresh First</h1>
-        <p>Perishable Stock Verification System</p>
-    </header>
+<aside class="sidebar">
 
-    <nav>
-        <a href="dashboard.html">Dashboard</a>
-        <a href="stock.html">Stock</a>
-        <a href="verification.html">Verification</a>
-        <a href="priority.html">Priority</a>
-        <a href="actions.html">Actions</a>
-        <a href="history.html">History</a>
-        <a href="reports.html">Reports</a>
-        <a href="users.html">Users</a>
-        <a href="categories.html">Categories</a>
-        <a href="settings.html">Settings</a>
-        <a href="login.html">Logout</a>
+    <a class="brand" href="dashboard.html">
+        <span class="brand-mark">✿</span>
+        <span>
+            <strong>Fresh First</strong>
+            <small>PERISHABLE STOCK REGISTER</small>
+        </span>
+    </a>
+
+    <div class="nav-label">WORKSPACE</div>
+
+    <nav class="menu">
+        <a class="active" href="dashboard.html"><span>▦</span> Dashboard</a>
+        <a href="stock.html"><span>▤</span> Stock Management</a>
+        <a href="verification.html"><span>✓</span> Verification</a>
+        <a href="priority.html"><span>⚑</span> Priority</a>
+        <a href="actions.html"><span>↗</span> Actions</a>
+
+        <div class="nav-label nav-label-spaced">
+            RECORDS & MANAGEMENT
+        </div>
+
+        <a href="history.html"><span>◷</span> History</a>
+        <a href="reports.html"><span>▥</span> Reports</a>
+        <a href="users.html"><span>♙</span> Users</a>
+        <a href="categories.html"><span>▦</span> Categories</a>
+        <a href="settings.html"><span>⚙</span> Settings</a>
     </nav>
 
-    <main>
-        <h2>Dashboard</h2>
-        <p>Welcome to Fresh First!</p>
+    <a class="logout" href="login.html">⇥ Logout</a>
 
-        <p>Today's Date: <span id="currentDate"></span></p>
+    <div class="sidebar-foot">
+        Fresh stock. Better decisions.
+    </div>
 
-        <section class="dashboard-cards">
+</aside>
 
-            <div class="card">
-                <h3>Total Products</h3>
-                <p id="totalProducts">0</p>
+<main class="main-content">
+
+    <header class="topbar">
+        <div>
+            <span class="eyebrow">FRESH FIRST / OVERVIEW</span>
+            <h1>Dashboard</h1>
+            <p class="subheading">
+                A clear view of your perishable stock.
+            </p>
+        </div>
+
+        <div class="profile">
+            <div class="avatar">FF</div>
+            <div>
+                <strong>Welcome</strong>
+                <small>Stock Management Team</small>
+            </div>
+        </div>
+    </header>
+
+    <!-- SLIDER -->
+
+    <section class="hero-slider">
+
+        <article class="slide active">
+            <span class="slide-kicker">SMART STOCK. FRESH FUTURE.</span>
+            <h2>Keep every product<br>fresh and accounted for.</h2>
+            <p>
+                Verify expiry, quantity and storage conditions
+                to know which products need attention.
+            </p>
+            <span class="slide-count">01 <i>/ 03</i></span>
+        </article>
+
+        <article class="slide">
+            <span class="slide-kicker">CHECK • PRIORITISE • ACT</span>
+            <h2>Find what needs<br>attention first.</h2>
+            <p>
+                Use clear priority levels and suggested actions
+                to support timely stock decisions.
+            </p>
+            <span class="slide-count">02 <i>/ 03</i></span>
+        </article>
+
+        <article class="slide">
+            <span class="slide-kicker">LESS WASTE, MORE CARE</span>
+            <h2>Make better decisions<br>with verified records.</h2>
+            <p>
+                Keep verification and action history organised
+                for reliable stock reporting.
+            </p>
+            <span class="slide-count">03 <i>/ 03</i></span>
+        </article>
+
+        <button class="slider-arrow prev" type="button">‹</button>
+        <button class="slider-arrow next" type="button">›</button>
+
+        <div class="slider-dots">
+            <button class="dot active" type="button"></button>
+            <button class="dot" type="button"></button>
+            <button class="dot" type="button"></button>
+        </div>
+
+    </section>
+
+    <!-- WELCOME -->
+
+    <section class="welcome-card">
+
+        <div class="welcome-icon">✦</div>
+
+        <div>
+            <h2>Welcome to Fresh First</h2>
+            <p>
+                Maintain perishable stock, verify records with
+                fixed rules, and take action before products go to waste.
+            </p>
+        </div>
+
+        <div class="today">
+            <small>TODAY</small>
+            <strong id="currentDate">--</strong>
+        </div>
+
+    </section>
+
+    <!-- STOCK OVERVIEW -->
+
+    <div class="section-heading">
+        <div>
+            <span class="eyebrow">AT A GLANCE</span>
+            <h2>Stock Overview</h2>
+        </div>
+
+        <span class="muted-note">
+            Live summary from your stock records
+        </span>
+    </div>
+
+    <section class="summary-grid">
+
+        <article class="metric-card">
+            <div class="metric-top">
+                <span>Total Products</span>
+                <span class="metric-icon icon-blue">▤</span>
+            </div>
+            <strong id="totalProducts">0</strong>
+            <small>Products recorded</small>
+        </article>
+
+        <article class="metric-card">
+            <div class="metric-top">
+                <span>Critical Products</span>
+                <span class="metric-icon icon-red">!</span>
+            </div>
+            <strong id="criticalProducts">0</strong>
+            <small>Require immediate attention</small>
+        </article>
+
+        <article class="metric-card">
+            <div class="metric-top">
+                <span>High Priority</span>
+                <span class="metric-icon icon-orange">⚑</span>
+            </div>
+            <strong id="highProducts">0</strong>
+            <small>Need prompt action</small>
+        </article>
+
+        <article class="metric-card">
+            <div class="metric-top">
+                <span>Expired Products</span>
+                <span class="metric-icon icon-purple">◷</span>
+            </div>
+            <strong id="expiredProducts">0</strong>
+            <small>Check and remove from stock</small>
+        </article>
+
+    </section>
+
+    <!-- LOWER SECTION -->
+
+    <section class="lower-grid">
+
+        <article class="content-panel">
+
+            <div class="panel-heading">
+                <div>
+                    <span class="eyebrow">MONITORING</span>
+                    <h2>Stock Health</h2>
+                </div>
+                <span class="panel-symbol">◉</span>
             </div>
 
-            <div class="card">
-                <h3>Critical Products</h3>
-                <p id="criticalProducts">0</p>
+            <div class="health-placeholder">
+
+                <div class="health-ring">
+                    <span>✓</span>
+                </div>
+
+                <div>
+                    <strong>Stock health summary</strong>
+                    <p>
+                        Stock status will appear here when dashboard
+                        data is connected.
+                    </p>
+                </div>
+
             </div>
 
-            <div class="card">
-                <h3>High Priority</h3>
-                <p id="highProducts">0</p>
+            <div class="legend">
+                <span><i class="green-dot"></i> Valid</span>
+                <span><i class="orange-dot"></i> Near expiry</span>
+                <span><i class="red-dot"></i> Expired / issue</span>
             </div>
 
-            <div class="card">
-                <h3>Expired Products</h3>
-                <p id="expiredProducts">0</p>
+        </article>
+
+        <article class="content-panel">
+
+            <div class="panel-heading">
+                <div>
+                    <span class="eyebrow">ACTION REQUIRED</span>
+                    <h2>Needs Attention</h2>
+                </div>
+
+                <a class="text-link" href="priority.html">
+                    View priority →
+                </a>
             </div>
 
-        </section>
-    </main>
+            <div class="empty-state">
+                <span class="empty-icon">✓</span>
+                <strong>Attention list is ready</strong>
+                <p>
+                    Products requiring attention will be listed
+                    here after data is connected.
+                </p>
+            </div>
 
-    <script src="js/dashboard.js"></script>
+        </article>
+
+    </section>
+
+    <footer>
+        © 2026 Fresh First · Perishable Stock Verification Register
+    </footer>
+
+</main>
+
+<script src="js/dashboard.js"></script>
 
 </body>
 </html>

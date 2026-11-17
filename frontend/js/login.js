@@ -1,27 +1,31 @@
 
-// FRESH FIRST - LOGIN PAGE
-
 document.addEventListener("DOMContentLoaded", function () {
 
     const loginForm = document.getElementById("loginForm");
 
-    if (loginForm) {
-        loginForm.addEventListener("submit", function (event) {
-            event.preventDefault();
+    loginForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-            const username = document.getElementById("username").value.trim();
-            const password = document.getElementById("password").value.trim();
-            const message = document.getElementById("loginMessage");
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const message = document.getElementById("loginMessage");
 
-            if (username === "" || password === "") {
-                message.textContent = "Please enter username and password.";
-                message.style.color = "red";
-                return;
-            }
+        if (username === "admin" && password === "admin123") {
 
-            message.textContent = "Login page is ready. Backend connection is required to verify your account.";
-            message.style.color = "#198754";
-        });
-    }
+            message.textContent = "Login successful!";
+            message.style.color = "green";
+
+            setTimeout(function () {
+                window.location.href = "dashboard.html";
+            }, 1000);
+
+        } else {
+
+            message.textContent = "Invalid username or password.";
+            message.style.color = "red";
+
+        }
+
+    });
 
 });
